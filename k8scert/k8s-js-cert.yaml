@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8scert
+spec:
+  selector:
+    app: k8scert
+  ports:
+    - port: 80
+      targetPort: 3000
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8scert
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8scert
+  template:
+    metadata:
+      labels:
+        app: k8scert
+    spec:
+      containers:
+        - name: app
+          image: learnk8s/02k8s-js-cert:1.0.0
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NAME
+              value: Stanley Nguyen
+          imagePullPolicy: IfNotPresent

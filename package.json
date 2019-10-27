@@ -1,0 +1,28 @@
+{
+  "name": "knote-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stanleynguyen/knote-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stanleynguyen/knote-js/issues"
+  },
+  "homepage": "https://github.com/stanleynguyen/knote-js#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "marked": "^0.7.0",
+    "minio": "^7.0.12",
+    "mongodb": "^3.3.3",
+    "multer": "^1.4.2",
+    "pug": "^2.0.4"
+  }
+}
